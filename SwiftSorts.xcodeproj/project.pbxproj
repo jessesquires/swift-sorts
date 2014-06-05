@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		889486171940406B00FAA122 /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
+		889486191940407500FAA122 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
+		88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88948622194040A700FAA122 /* SwiftSortsTests.swift */; };
 		88B3D56F193EE32D000006CD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3D56E193EE32D000006CD /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +26,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		889486161940406B00FAA122 /* sortUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sortUtils.swift; sourceTree = "<group>"; };
+		889486181940407500FAA122 /* sorts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sorts.swift; sourceTree = "<group>"; };
+		8894861E194040A700FAA122 /* SwiftSortsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSortsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88948621194040A700FAA122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88948622194040A700FAA122 /* SwiftSortsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSortsTests.swift; sourceTree = "<group>"; };
 		88B3D56B193EE32D000006CD /* SwiftSorts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftSorts; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B3D56E193EE32D000006CD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8894861B194040A700FAA122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B3D568193EE32D000006CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8894861F194040A700FAA122 /* SwiftSortsTests */ = {
+			isa = PBXGroup;
+			children = (
+				88948622194040A700FAA122 /* SwiftSortsTests.swift */,
+				88948620194040A700FAA122 /* Supporting Files */,
+			);
+			path = SwiftSortsTests;
+			sourceTree = "<group>";
+		};
+		88948620194040A700FAA122 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88948621194040A700FAA122 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		88B3D562193EE32D000006CD = {
 			isa = PBXGroup;
 			children = (
 				88B3D56D193EE32D000006CD /* SwiftSorts */,
+				8894861F194040A700FAA122 /* SwiftSortsTests */,
 				88B3D56C193EE32D000006CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				88B3D56B193EE32D000006CD /* SwiftSorts */,
+				8894861E194040A700FAA122 /* SwiftSortsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				88B3D56E193EE32D000006CD /* main.swift */,
+				889486161940406B00FAA122 /* sortUtils.swift */,
+				889486181940407500FAA122 /* sorts.swift */,
 			);
 			path = SwiftSorts;
 			sourceTree = "<group>";
@@ -65,6 +101,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8894861D194040A700FAA122 /* SwiftSortsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88948624194040A700FAA122 /* Build configuration list for PBXNativeTarget "SwiftSortsTests" */;
+			buildPhases = (
+				8894861A194040A700FAA122 /* Sources */,
+				8894861B194040A700FAA122 /* Frameworks */,
+				8894861C194040A700FAA122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSortsTests;
+			productName = SwiftSortsTests;
+			productReference = 8894861E194040A700FAA122 /* SwiftSortsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		88B3D56A193EE32D000006CD /* SwiftSorts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88B3D572193EE32D000006CD /* Build configuration list for PBXNativeTarget "SwiftSorts" */;
@@ -91,6 +144,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
+					8894861D194040A700FAA122 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					88B3D56A193EE32D000006CD = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -109,22 +165,75 @@
 			projectRoot = "";
 			targets = (
 				88B3D56A193EE32D000006CD /* SwiftSorts */,
+				8894861D194040A700FAA122 /* SwiftSortsTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		8894861C194040A700FAA122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		8894861A194040A700FAA122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B3D567193EE32D000006CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889486191940407500FAA122 /* sorts.swift in Sources */,
 				88B3D56F193EE32D000006CD /* main.swift in Sources */,
+				889486171940406B00FAA122 /* sortUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		88948625194040A700FAA122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSortsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		88948626194040A700FAA122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftSortsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		88B3D570193EE32D000006CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -217,6 +326,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		88948624194040A700FAA122 /* Build configuration list for PBXNativeTarget "SwiftSortsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88948625194040A700FAA122 /* Debug */,
+				88948626194040A700FAA122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		88B3D566193EE32D000006CD /* Build configuration list for PBXProject "SwiftSorts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -233,6 +350,7 @@
 				88B3D574193EE32D000006CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
