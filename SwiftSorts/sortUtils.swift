@@ -62,3 +62,33 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void))
     
     return isSorted
 }
+
+
+// TODO: refactor
+
+func sortArrayQuick(arr: Int[], sortName: String, sortClosure:(arr: Int[], left: Int, right: Int) -> (Void)) -> Bool
+{
+    println("\nPreparing for \(sortName)...")
+    
+    var arrCopy: Int[] = arr.copy()
+    
+    println("Initially sorted? \(arrayIsSorted(arrCopy))")
+    
+    println("\nRunning \(sortName)...")
+    
+    var startTime: NSDate = NSDate()
+    
+    sortClosure(arr: arrCopy, left: 0, right: arrCopy.count - 1)
+    
+    var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
+    var isSorted: Bool = arrayIsSorted(arrCopy)
+    
+    if isSorted {
+        println("\(sortName) finished in \(totalTime) sec\n")
+    }
+    else {
+        println("** \(sortName) failed! **\n")
+    }
+    
+    return isSorted
+}
