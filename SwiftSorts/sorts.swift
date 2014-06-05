@@ -10,23 +10,23 @@
 
 import Foundation
 
-func selectionSort(var list :Int[])
+func selectionSort(var arr: Int[])
 {
     var minIndex = 0
     
-    for i in 0..list.count {
+    for i in 0..arr.count {
         minIndex = i
         
-        for j in (i + 1)..list.count {
-            if list[j] < list[minIndex] {
+        for j in (i + 1)..arr.count {
+            if arr[j] < arr[minIndex] {
                 minIndex = j
             }
         }
         
         if (minIndex != i) {
-            list[i] = list[i] ^ list[minIndex]
-            list[minIndex] = list[i] ^ list[minIndex]
-            list[i] = list[i] ^ list[minIndex]
+            arr[i] = arr[i] ^ arr[minIndex]
+            arr[minIndex] = arr[i] ^ arr[minIndex]
+            arr[i] = arr[i] ^ arr[minIndex]
         }
     }
 }

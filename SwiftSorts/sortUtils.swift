@@ -22,7 +22,7 @@ func randomNumbersArray(count: Int) -> Int[]
     return arr
 }
 
-func arrayIsSorted(arr :Int[]) -> Bool
+func arrayIsSorted(arr: Int[]) -> Bool
 {
     println("Verifying list is sorted...")
     
@@ -34,4 +34,31 @@ func arrayIsSorted(arr :Int[]) -> Bool
         }
     }
     return true;
+}
+
+func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void)) -> Bool
+{
+    println("\nPreparing for \(sortName)...")
+    
+    var arrCopy: Int[] = arr.copy()
+    
+    println("Initially sorted? \(arrayIsSorted(arrCopy))")
+    
+    println("\nRunning \(sortName)...")
+    
+    var startTime: NSDate = NSDate()
+    
+    sortClosure(arr: arrCopy)
+    
+    var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
+    var isSorted: Bool = arrayIsSorted(arrCopy)
+    
+    if isSorted {
+        println("\(sortName) finished in \(totalTime) sec\n")
+    }
+    else {
+        println("** \(sortName) failed! **\n")
+    }
+    
+    return isSorted
 }
