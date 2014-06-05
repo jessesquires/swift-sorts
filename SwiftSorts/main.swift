@@ -17,3 +17,5 @@ var unsortedArray : Int[] = randomNumbersArray(MAX_COUNT)
 println("Initial array sorted? \(arrayIsSorted(unsortedArray))")
 
 sortArray(unsortedArray, "Selection Sort", selectionSort)
+
+sortArray(unsortedArray, "Insertion Sort", insertionSort)

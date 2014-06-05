@@ -10,6 +10,13 @@
 
 import Foundation
 
+func swap(inout a: Int, inout b: Int)
+{
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
+}
+
 func selectionSort(var arr: Int[])
 {
     var minIndex = 0
@@ -24,9 +31,21 @@ func selectionSort(var arr: Int[])
         }
         
         if (minIndex != i) {
-            arr[i] = arr[i] ^ arr[minIndex]
-            arr[minIndex] = arr[i] ^ arr[minIndex]
-            arr[i] = arr[i] ^ arr[minIndex]
+            swap(&arr[i], &arr[minIndex])
         }
+    }
+}
+
+func insertionSort(var arr: Int[])
+{
+    for i in 1..arr.count {
+        var j = i
+        var target = arr[i]
+        
+        while j > 0 && target < arr[j - 1] {
+            swap(&arr[j], &arr[j - 1])
+            j--
+        }
+        arr[j] = target
     }
 }
