@@ -39,8 +39,8 @@ else {
 }
 
 
-sortArray(unsortedArray, "Selection Sort", selectionSort)
+//sortArray(unsortedArray, "Selection Sort", selectionSort)
 
-sortArray(unsortedArray, "Insertion Sort", insertionSort)
+//sortArray(unsortedArray, "Insertion Sort", insertionSort)
 
 println()
