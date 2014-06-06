@@ -1,7 +1,18 @@
 # Swift Sorts
 
-A collection of sorting algorithms implemented in Swift
+A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Swift.
 
-This project is intended to compliment [Objective-C Sorts](https://github.com/jessesquires/objc-sorts).
+**See [Objective-C Sorts](https://github.com/jessesquires/objc-sorts) for comparison!**
 
-*Still a work in progress*
+Each sorting algorithm is executed on a list of 10,000 randomly generated numbers and verified.
+Execution time for each algorithm is logged for comparison.
+
+## Algorithms
+
+* [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
+* [Insertion Sort](http://en.wikipedia.org/wiki/Insertion_sort)
+* [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
+
+## Use
+
+Open in Xcode, build and run.
