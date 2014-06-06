@@ -24,8 +24,6 @@ func randomNumbersArray(count: Int) -> Int[]
 
 func arrayIsSorted(arr: Int[]) -> Bool
 {
-    println("Verifying list is sorted...")
-    
     for i in 0..arr.count-1 {
         var a = arr[i]
         var b = arr[i + 1]

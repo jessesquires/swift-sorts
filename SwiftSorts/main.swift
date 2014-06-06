@@ -10,7 +10,7 @@
 
 import Foundation
 
-let MAX_COUNT = 1000
+let MAX_COUNT = 10000
 
 var unsortedArray : Int[] = randomNumbersArray(MAX_COUNT)
 
