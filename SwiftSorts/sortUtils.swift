@@ -63,10 +63,11 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void))
     return isSorted
 }
 
-
-// TODO: refactor
-
-func sortArrayQuick(arr: Int[], sortName: String, sortClosure:(arr: Int[], left: Int, right: Int) -> (Void)) -> Bool
+func sortArray(arr: Int[],
+    sortName: String,
+    sortClosure:(arr: Int[], left: Int, right: Int) -> (Void),
+    leftVal: Int,
+    rightVal: Int) -> Bool
 {
     println("\nPreparing for \(sortName)...")
     
@@ -78,7 +79,7 @@ func sortArrayQuick(arr: Int[], sortName: String, sortClosure:(arr: Int[], left:
     
     var startTime: NSDate = NSDate()
     
-    sortClosure(arr: arrCopy, left: 0, right: arrCopy.count - 1)
+    sortClosure(arr: arrCopy, left: leftVal, right: rightVal)
     
     var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
     var isSorted: Bool = arrayIsSorted(arrCopy)

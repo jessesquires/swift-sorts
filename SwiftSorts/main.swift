@@ -20,10 +20,8 @@ sortArray(unsortedArray, "Selection Sort", selectionSort)
 
 sortArray(unsortedArray, "Insertion Sort", insertionSort)
 
-sortArrayQuick(unsortedArray, "Quick Sort", quickSort)
+sortArray(unsortedArray, "Quick Sort", quickSort, 0, unsortedArray.count - 1)
 
-
-// TODO: refactor
 
 var sortName = "Swift Sort"
 var arrCopy : Int[] = unsortedArray.copy()
@@ -35,7 +33,8 @@ var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
 var isSorted: Bool = arrayIsSorted(arrCopy)
 
 if isSorted {
-    println("\(sortName) finished in \(totalTime) sec\n")    }
+    println("\(sortName) finished in \(totalTime) sec\n")
+}
 else {
     println("** \(sortName) failed! **\n")
 }
