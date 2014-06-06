@@ -11,7 +11,7 @@ Execution time for each algorithm is logged for comparison.
 ## Algorithms
 
 * [Quick Sort](http://en.wikipedia.org/wiki/Quicksort)
-* Swift's `Array.sort()`
+* Swift `Array.sort()`
 * [Insertion Sort](http://en.wikipedia.org/wiki/Insertion_sort)
 * [Selection Sort](http://en.wikipedia.org/wiki/Selection_sort)
 
