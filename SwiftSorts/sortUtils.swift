@@ -42,7 +42,7 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void))
         println("Already sorted!")
     }
     
-    println("\nRunning \(sortName)...")
+    println("Running \(sortName)...")
     
     var startTime: NSDate = NSDate()
     
@@ -54,18 +54,11 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void))
     if isSorted {
         println("\(sortName) finished in \(totalTime) sec\n")
     }
-    else {
-        println("** \(sortName) failed! **\n")
-    }
     
     return isSorted
 }
 
-func sortArray(arr: Int[],
-    sortName: String,
-    sortClosure:(arr: Int[], left: Int, right: Int) -> (Void),
-    leftVal: Int,
-    rightVal: Int) -> Bool
+func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[], left: Int, right: Int) -> (Void)) -> Bool
 {
     var arrCopy: Int[] = arr.copy()
     
@@ -73,20 +66,17 @@ func sortArray(arr: Int[],
         println("Already sorted!")
     }
     
-    println("\nRunning \(sortName)...")
+    println("Running \(sortName)...")
     
     var startTime: NSDate = NSDate()
     
-    sortClosure(arr: arrCopy, left: leftVal, right: rightVal)
+    sortClosure(arr: arrCopy, left: 0, right: arrCopy.count - 1)
     
     var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
     var isSorted: Bool = arrayIsSorted(arrCopy)
     
     if isSorted {
         println("\(sortName) finished in \(totalTime) sec\n")
-    }
-    else {
-        println("** \(sortName) failed! **\n")
     }
     
     return isSorted

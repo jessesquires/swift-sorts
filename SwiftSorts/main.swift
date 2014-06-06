@@ -15,11 +15,7 @@ let MAX_COUNT = 10_000
 var unsortedArray : Int[] = randomNumbersArray(MAX_COUNT)
 
 println("Initial array sorted? \(arrayIsSorted(unsortedArray))")
-println("\n---------------")
-
-
-sortArray(unsortedArray, "Quick Sort", quickSort, 0, unsortedArray.count - 1)
-
+println("\n---------------\n")
 
 var sortName = "Swift Sort"
 var arrCopy : Int[] = unsortedArray.copy()
@@ -32,12 +28,10 @@ var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
 var isSorted: Bool = arrayIsSorted(arrCopy)
 
 if isSorted {
-    println("\(sortName) finished in \(totalTime) sec")
-}
-else {
-    println("** \(sortName) failed! **\n")
+    println("\(sortName) finished in \(totalTime) sec\n")
 }
 
+sortArray(unsortedArray, "Quick Sort", quickSort)
 
 sortArray(unsortedArray, "Selection Sort", selectionSort)
 
