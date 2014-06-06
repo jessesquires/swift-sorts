@@ -12,7 +12,7 @@ import Foundation
 
 func randomNumbersArray(count: Int) -> Int[]
 {
-    println("Generating list of random integers...")
+    println("Generating array of \(count) random integers [0, \(UINT32_MAX))...")
     
     var arr: Int[] = Array()
     for _ in 0..count {
@@ -36,11 +36,11 @@ func arrayIsSorted(arr: Int[]) -> Bool
 
 func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void)) -> Bool
 {
-    println("\nPreparing for \(sortName)...")
-    
     var arrCopy: Int[] = arr.copy()
     
-    println("Initially sorted? \(arrayIsSorted(arrCopy))")
+    if arrayIsSorted(arrCopy) {
+        println("Already sorted!")
+    }
     
     println("\nRunning \(sortName)...")
     
@@ -67,11 +67,11 @@ func sortArray(arr: Int[],
     leftVal: Int,
     rightVal: Int) -> Bool
 {
-    println("\nPreparing for \(sortName)...")
-    
     var arrCopy: Int[] = arr.copy()
     
-    println("Initially sorted? \(arrayIsSorted(arrCopy))")
+    if arrayIsSorted(arrCopy) {
+        println("Already sorted!")
+    }
     
     println("\nRunning \(sortName)...")
     
