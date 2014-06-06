@@ -33,6 +33,8 @@ if isSorted {
 
 sortArray(unsortedArray, "Quick Sort", quickSort)
 
+sortArray(unsortedArray, "Heap Sort", heapSort)
+
 sortArray(unsortedArray, "Selection Sort", selectionSort)
 
 sortArray(unsortedArray, "Insertion Sort", insertionSort)

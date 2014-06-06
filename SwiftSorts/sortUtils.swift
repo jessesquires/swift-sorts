@@ -54,6 +54,9 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[]) -> (Void))
     if isSorted {
         println("\(sortName) finished in \(totalTime) sec\n")
     }
+    else {
+        println("\(sortName) FAILED!\n")
+    }
     
     return isSorted
 }
@@ -77,6 +80,9 @@ func sortArray(arr: Int[], sortName: String, sortClosure:(arr: Int[], left: Int,
     
     if isSorted {
         println("\(sortName) finished in \(totalTime) sec\n")
+    }
+    else {
+        println("\(sortName) FAILED!\n")
     }
     
     return isSorted

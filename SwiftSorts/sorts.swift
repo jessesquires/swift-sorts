@@ -50,6 +50,19 @@ func insertionSort(var arr: Int[])
     }
 }
 
+func quickSort(arr: Int[], left: Int, right: Int)
+{
+    var index = partition(arr, left, right)
+    
+    if left < index - 1 {
+        quickSort(arr, left, index - 1)
+    }
+    
+    if index < right {
+        quickSort(arr, index, right)
+    }
+}
+
 func partition(arr: Int[], left: Int, right: Int) -> Int
 {
     var i = left
@@ -77,16 +90,46 @@ func partition(arr: Int[], left: Int, right: Int) -> Int
     return i
 }
 
-func quickSort(arr: Int[], left: Int, right: Int)
+func heapSort(arr: Int[])
 {
-    var index = partition(arr, left, right)
+    heapify(arr, arr.count)
     
-    if left < index - 1 {
-        quickSort(arr, left, index - 1)
-    }
+    var end = arr.count - 1
     
-    if index < right {
-        quickSort(arr, index, right)
+    while end > 0 {
+        swap(&arr[end], &arr[0])
+        siftDown(arr, 0, end - 1)
+        end--
     }
 }
 
+func heapify(arr: Int[], count: Int)
+{
+    var start = (count - 2) / 2
+    
+    while start >= 0 {
+        siftDown(arr, start, count - 1)
+        start--
+    }
+}
+
+func siftDown(arr: Int[], start: Int, end: Int)
+{
+    var root = start
+    
+    while root * 2 + 1 <= end {
+        var child = root * 2 + 1
+        
+        if child + 1 <= end && arr[child] < arr[child + 1] {
+            child++
+        }
+        
+        if arr[root] < arr[child] {
+            swap(&arr[root], &arr[child])
+            root = child
+        }
+        else {
+            return;
+        }
+    }
+}
