@@ -10,7 +10,7 @@
 
 import Foundation
 
-let MAX_COUNT = 10000
+let MAX_COUNT = 10_000
 
 var unsortedArray : Int[] = randomNumbersArray(MAX_COUNT)
 
@@ -39,8 +39,8 @@ else {
 }
 
 
-//sortArray(unsortedArray, "Selection Sort", selectionSort)
+sortArray(unsortedArray, "Selection Sort", selectionSort)
 
-//sortArray(unsortedArray, "Insertion Sort", insertionSort)
+sortArray(unsortedArray, "Insertion Sort", insertionSort)
 
 println()
