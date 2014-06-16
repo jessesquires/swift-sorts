@@ -10,6 +10,11 @@
 
 import Foundation
 
+func swiftSort(arr: Int[])
+{
+    arr.sort({ $0 < $1 })
+}
+
 func swap(inout a: Int, inout b: Int)
 {
     a = a ^ b
@@ -48,6 +53,11 @@ func insertionSort(var arr: Int[])
         }
         arr[j] = target
     }
+}
+
+func quickSort(arr: Int[])
+{
+    quickSort(arr, 0, arr.count - 1)
 }
 
 func quickSort(arr: Int[], left: Int, right: Int)
@@ -129,7 +139,7 @@ func siftDown(arr: Int[], start: Int, end: Int)
             root = child
         }
         else {
-            return;
+            return
         }
     }
 }
