@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				88B3D56E193EE32D000006CD /* main.swift */,
-				889486161940406B00FAA122 /* sortUtils.swift */,
 				889486181940407500FAA122 /* sorts.swift */,
+				889486161940406B00FAA122 /* sortUtils.swift */,
 			);
 			path = SwiftSorts;
 			sourceTree = "<group>";

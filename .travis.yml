@@ -1,0 +1,8 @@
+language: objective-c
+
+before_install: 
+- brew update
+- brew upgrade xctool
+
+script: 
+- xctool clean build test -project SwiftSorts.xcodeproj -scheme SwiftSortsRelease

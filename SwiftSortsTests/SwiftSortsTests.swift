@@ -12,6 +12,10 @@ import XCTest
 
 class SwiftSortsTests: XCTestCase {
     
+    var unsortedArray : Int[] = [23, 87, 1, 0, 34, 687, 34, 75, 10, 9324, 809, 98, 35, 4]
+    
+    var sortedArray : Int[] = [0, 1, 4, 10, 23, 34, 34, 35, 75, 87, 98, 687, 809, 9324]
+    
     override func setUp() {
         super.setUp()
         // Put setup code here.
@@ -22,8 +26,8 @@ class SwiftSortsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
+    func testQuickSort() {
+        
         XCTAssert(true, "Pass")
     }
     
