@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8810836A194FEE900078727B /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
+		8810836B194FEE900078727B /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		889486171940406B00FAA122 /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		889486191940407500FAA122 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88948622194040A700FAA122 /* SwiftSortsTests.swift */; };
@@ -185,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8810836A194FEE900078727B /* sorts.swift in Sources */,
+				8810836B194FEE900078727B /* sortUtils.swift in Sources */,
 				88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
