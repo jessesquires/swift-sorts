@@ -60,4 +60,20 @@ class SwiftSortsTests: XCTestCase {
         heapSort(unwrappedUnsortedArray)
         XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
+    
+    func testInsertionSort() {
+        var unwrappedUnsortedArray : Int[] = self.unsortedArray!
+        
+        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        insertionSort(unwrappedUnsortedArray)
+        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+    }
+    
+    func testSelectionSort() {
+        var unwrappedUnsortedArray : Int[] = self.unsortedArray!
+        
+        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        selectionSort(unwrappedUnsortedArray)
+        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+    }
 }
