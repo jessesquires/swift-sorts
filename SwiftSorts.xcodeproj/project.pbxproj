@@ -12,6 +12,7 @@
 		889486171940406B00FAA122 /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		889486191940407500FAA122 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88948622194040A700FAA122 /* SwiftSortsTests.swift */; };
+		88A0A4E519508B3E00672F9A /* SwiftSortsPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0A4E419508B3E00672F9A /* SwiftSortsPerformanceTests.swift */; };
 		88B3D56F193EE32D000006CD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3D56E193EE32D000006CD /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		8894861E194040A700FAA122 /* SwiftSortsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSortsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88948621194040A700FAA122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88948622194040A700FAA122 /* SwiftSortsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSortsTests.swift; sourceTree = "<group>"; };
+		88A0A4E419508B3E00672F9A /* SwiftSortsPerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSortsPerformanceTests.swift; sourceTree = "<group>"; };
 		88B3D56B193EE32D000006CD /* SwiftSorts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftSorts; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B3D56E193EE32D000006CD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				88948622194040A700FAA122 /* SwiftSortsTests.swift */,
+				88A0A4E419508B3E00672F9A /* SwiftSortsPerformanceTests.swift */,
 				88948620194040A700FAA122 /* Supporting Files */,
 			);
 			path = SwiftSortsTests;
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A0A4E519508B3E00672F9A /* SwiftSortsPerformanceTests.swift in Sources */,
 				8810836A194FEE900078727B /* sorts.swift in Sources */,
 				8810836B194FEE900078727B /* sortUtils.swift in Sources */,
 				88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */,
