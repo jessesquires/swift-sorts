@@ -10,6 +10,16 @@
 
 import Foundation
 
+typealias SortAlgorithmClosure = (arr: Int[]) -> ()
+
+enum SortAlgorithmName : String {
+    case Swift = "Swift"
+    case Quick = "Quick"
+    case Heap = "Heap"
+    case Insertion = "Insertion"
+    case Selection = "Selection"
+}
+
 func randomIntegerArray(count: Int) -> Int[]
 {
     println("Generating array of \(count) random integers in range: [0, \(UINT32_MAX))...")
@@ -37,12 +47,12 @@ func arrayIsSorted(arr: Int[]) -> Bool
 }
 
 func sortArray(#anArray: Int[],
-               #sortFunctionName: SortFunctionName,
-               #sortClosure: SortFunctionClosure) -> NSTimeInterval
+               #sortName: SortAlgorithmName,
+               #sortClosure: SortAlgorithmClosure) -> NSTimeInterval
 {
     var arrCopy: Int[] = anArray.copy()
     
-    println("Running \(sortFunctionName.toRaw())...")
+    println("Running \(sortName.toRaw())...")
     
     var startTime: NSDate = NSDate()
     
@@ -52,7 +62,7 @@ func sortArray(#anArray: Int[],
     
     assert(arrayIsSorted(arrCopy), "** Failed to sort! **")
     
-    println("\(sortFunctionName.toRaw()) finished in \(totalTime) sec\n")
+    println("\(sortName.toRaw()) finished in \(totalTime) sec\n")
     
     return totalTime
 }

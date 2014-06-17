@@ -14,27 +14,17 @@ let MAX_COUNT = 10_000
 
 let NUM_TRIALS = 10
 
-typealias SortFunctionClosure = (arr: Int[]) -> ()
+let sortFunctions : Dictionary<SortAlgorithmName, SortAlgorithmClosure> = [SortAlgorithmName.Swift : swiftSort,
+                                                                           SortAlgorithmName.Quick : quickSort,
+                                                                           SortAlgorithmName.Heap : heapSort,
+                                                                           SortAlgorithmName.Insertion : insertionSort,
+                                                                           SortAlgorithmName.Selection : selectionSort]
 
-enum SortFunctionName : String {
-    case Swift = "Swift"
-    case Quick = "Quick"
-    case Heap = "Heap"
-    case Insertion = "Insertion"
-    case Selection = "Selection"
-}
-
-let sortFunctions : Dictionary<SortFunctionName, SortFunctionClosure> = [SortFunctionName.Swift : swiftSort,
-                                                                         SortFunctionName.Quick : quickSort,
-                                                                         SortFunctionName.Heap : heapSort,
-                                                                         SortFunctionName.Insertion : insertionSort,
-                                                                         SortFunctionName.Selection : selectionSort]
-
-var averageSortTimes : Dictionary<SortFunctionName, NSTimeInterval> = [SortFunctionName.Swift : 0.0,
-                                                                       SortFunctionName.Quick : 0.0,
-                                                                       SortFunctionName.Heap : 0.0,
-                                                                       SortFunctionName.Insertion : 0.0,
-                                                                       SortFunctionName.Selection : 0.0]
+var averageSortTimes : Dictionary<SortAlgorithmName, NSTimeInterval> = [SortAlgorithmName.Swift : 0.0,
+                                                                        SortAlgorithmName.Quick : 0.0,
+                                                                        SortAlgorithmName.Heap : 0.0,
+                                                                        SortAlgorithmName.Insertion : 0.0,
+                                                                        SortAlgorithmName.Selection : 0.0]
 
 for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
@@ -44,7 +34,7 @@ for t in 1...NUM_TRIALS {
         let totalTime = averageSortTimes[name]!
         
         var sortTime = sortArray(anArray: unsortedArray,
-                                 sortFunctionName: name,
+                                 sortName: name,
                                  sortClosure: closure)
         
         averageSortTimes[name] = totalTime + sortTime
