@@ -22,7 +22,7 @@ func swap(inout a: Int, inout b: Int)
     a = a ^ b
 }
 
-func selectionSort(var arr: Int[])
+func selectionSort(arr: Int[])
 {
     var minIndex = 0
     
@@ -41,7 +41,7 @@ func selectionSort(var arr: Int[])
     }
 }
 
-func insertionSort(var arr: Int[])
+func insertionSort(arr: Int[])
 {
     for i in 1..arr.count {
         var j = i

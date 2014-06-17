@@ -14,7 +14,7 @@ let MAX_COUNT = 10_000
 
 let NUM_TRIALS = 10
 
-let sortFunctions : Dictionary<SortAlgorithmName, SortAlgorithmClosure> = [SortAlgorithmName.Swift : swiftSort,
+let sortAlgorithms : Dictionary<SortAlgorithmName, SortAlgorithmClosure> = [SortAlgorithmName.Swift : swiftSort,
                                                                            SortAlgorithmName.Quick : quickSort,
                                                                            SortAlgorithmName.Heap : heapSort,
                                                                            SortAlgorithmName.Insertion : insertionSort,
@@ -30,7 +30,7 @@ for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
     var unsortedArray : Int[] = randomIntegerArray(MAX_COUNT)
     
-    for (name, closure) in sortFunctions {
+    for (name, closure) in sortAlgorithms {
         let totalTime = averageSortTimes[name]!
         
         var sortTime = sortArray(anArray: unsortedArray,
