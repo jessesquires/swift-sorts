@@ -15,13 +15,6 @@ func swiftSort(arr: Int[])
     arr.sort({ $0 < $1 })
 }
 
-func swap(inout a: Int, inout b: Int)
-{
-    a = a ^ b
-    b = a ^ b
-    a = a ^ b
-}
-
 func selectionSort(arr: Int[])
 {
     var minIndex = 0

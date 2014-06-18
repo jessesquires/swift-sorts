@@ -25,55 +25,43 @@ class SwiftSortsTests: XCTestCase {
         super.tearDown()
     }
     
-    func arrayIsEqualToArray(firstArray: Int[], secondArray: Int[]) -> Bool {
-        assert(firstArray.count == secondArray.count, "** Cannot compare arrays of different length **")
-        
-        for i in 0..firstArray.count {
-            if firstArray[i] != secondArray[i] {
-                return false
-            }
-        }
-        
-        return true
-    }
-    
     func testSwiftSort() {
         var unwrappedUnsortedArray : Int[] = self.unsortedArray!
         
-        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        XCTAssertFalse(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should not be equal before sorting")
         swiftSort(unwrappedUnsortedArray)
-        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+        XCTAssertTrue(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
     
     func testQuickSort() {
         var unwrappedUnsortedArray : Int[] = self.unsortedArray!
         
-        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        XCTAssertFalse(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should not be equal before sorting")
         quickSort(unwrappedUnsortedArray)
-        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+        XCTAssertTrue(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
 
     func testHeapSort() {
         var unwrappedUnsortedArray : Int[] = self.unsortedArray!
         
-        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        XCTAssertFalse(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should not be equal before sorting")
         heapSort(unwrappedUnsortedArray)
-        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+        XCTAssertTrue(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
     
     func testInsertionSort() {
         var unwrappedUnsortedArray : Int[] = self.unsortedArray!
         
-        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        XCTAssertFalse(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should not be equal before sorting")
         insertionSort(unwrappedUnsortedArray)
-        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+        XCTAssertTrue(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
     
     func testSelectionSort() {
         var unwrappedUnsortedArray : Int[] = self.unsortedArray!
         
-        XCTAssertFalse(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should not be equal before sorting")
+        XCTAssertFalse(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should not be equal before sorting")
         selectionSort(unwrappedUnsortedArray)
-        XCTAssertTrue(self.arrayIsEqualToArray(self.sortedArray, secondArray: unwrappedUnsortedArray), "Arrays should be equal after sorting")
+        XCTAssertTrue(equal(self.sortedArray, unwrappedUnsortedArray), "Arrays should be equal after sorting")
     }
 }
