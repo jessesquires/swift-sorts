@@ -1,6 +1,6 @@
 //
 //  Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //  GitHub
 //  https://github.com/jessesquires/swift-sorts
@@ -48,17 +48,17 @@ func arrayIsSorted(arr: Int[]) -> Bool
 
 func sortArray(#anArray: Int[],
                #sortName: SortAlgorithmName,
-               #sortClosure: SortAlgorithmClosure) -> NSTimeInterval
+               #sortClosure: SortAlgorithmClosure) -> Double
 {
     var arrCopy: Int[] = anArray.copy()
     
     println("Running \(sortName.toRaw())...")
     
-    var startTime: NSDate = NSDate()
+    var startTime = NSDate()
     
     sortClosure(arr: arrCopy)
     
-    var totalTime: NSTimeInterval = startTime.timeIntervalSinceNow * -1
+    var totalTime = startTime.timeIntervalSinceNow * -1
     
     assert(arrayIsSorted(arrCopy), "** Failed to sort! **")
     

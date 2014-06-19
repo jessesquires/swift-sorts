@@ -1,6 +1,6 @@
 //
 //  Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //  GitHub
 //  https://github.com/jessesquires/swift-sorts

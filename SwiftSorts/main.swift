@@ -1,6 +1,6 @@
 //
 //  Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //  GitHub
 //  https://github.com/jessesquires/swift-sorts
@@ -10,21 +10,21 @@
 
 import Foundation
 
-let MAX_COUNT = 10_000
+let MAX_COUNT = 1_000
 
 let NUM_TRIALS = 10
 
 let sortAlgorithms : Dictionary<SortAlgorithmName, SortAlgorithmClosure> = [SortAlgorithmName.Swift : swiftSort,
-                                                                           SortAlgorithmName.Quick : quickSort,
-                                                                           SortAlgorithmName.Heap : heapSort,
-                                                                           SortAlgorithmName.Insertion : insertionSort,
-                                                                           SortAlgorithmName.Selection : selectionSort]
+                                                                            SortAlgorithmName.Quick : quickSort,
+                                                                            SortAlgorithmName.Heap : heapSort,
+                                                                            SortAlgorithmName.Insertion : insertionSort,
+                                                                            SortAlgorithmName.Selection : selectionSort]
 
-var averageSortTimes : Dictionary<SortAlgorithmName, NSTimeInterval> = [SortAlgorithmName.Swift : 0.0,
-                                                                        SortAlgorithmName.Quick : 0.0,
-                                                                        SortAlgorithmName.Heap : 0.0,
-                                                                        SortAlgorithmName.Insertion : 0.0,
-                                                                        SortAlgorithmName.Selection : 0.0]
+var averageSortTimes : Dictionary<SortAlgorithmName, Double> = [SortAlgorithmName.Swift : 0.0,
+                                                                SortAlgorithmName.Quick : 0.0,
+                                                                SortAlgorithmName.Heap : 0.0,
+                                                                SortAlgorithmName.Insertion : 0.0,
+                                                                SortAlgorithmName.Selection : 0.0]
 
 for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
