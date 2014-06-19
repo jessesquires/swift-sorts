@@ -23,5 +23,3 @@ This program runs 10 trials on the sorting algorithms below and logs its progres
 ## Use
 
 Open in Xcode, build and run.
-
-

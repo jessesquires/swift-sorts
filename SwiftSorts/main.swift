@@ -10,7 +10,7 @@
 
 import Foundation
 
-let MAX_COUNT = 1_000
+let MAX_COUNT = 10_000
 
 let NUM_TRIALS = 10
 
