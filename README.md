@@ -1,4 +1,4 @@
-# Swift Sorts [![Build Status](https://travis-ci.org/jessesquires/swift-sorts.svg)](http://travis-ci.org/jessesquires/swift-sorts)
+# Swift Sorts
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Swift.
 
