@@ -2,7 +2,7 @@
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Swift.
 
-**See [Objective-C Sorts](https://github.com/jessesquires/objc-sorts) for comparison!**
+Read the blog post: [Apples to apples](http://www.jessesquires.com/apples-to-apples/) and see [Objective-C Sorts](https://github.com/jessesquires/objc-sorts) for comparison.
 
 ## Algorithms
 
