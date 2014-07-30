@@ -13,7 +13,7 @@ import XCTest
 class SwiftSortsPerformanceTests: XCTestCase {
     
     let maxCount = 1_000
-    var randomArray : Int[]? = nil
+    var randomArray : [Int]? = nil
     
     override func setUp() {
         super.setUp()
@@ -26,32 +26,42 @@ class SwiftSortsPerformanceTests: XCTestCase {
     }
     
     func testSwiftSortPerformance() {
+        var unwrappedRandomArray: [Int] = self.randomArray!
+        
         self.measureBlock() {
-            swiftSort(self.randomArray!)
+            swiftSort(&unwrappedRandomArray)
         }
     }
     
     func testQuickSortPerformance() {
+        var unwrappedRandomArray: [Int] = self.randomArray!
+        
         self.measureBlock() {
-            quickSort(self.randomArray!)
+            quickSort(&unwrappedRandomArray)
         }
     }
     
     func testHeapSortPerformance() {
+        var unwrappedRandomArray: [Int] = self.randomArray!
+        
         self.measureBlock() {
-            heapSort(self.randomArray!)
+            heapSort(&unwrappedRandomArray)
         }
     }
     
     func testInsertionSortPerformance() {
+        var unwrappedRandomArray: [Int] = self.randomArray!
+        
         self.measureBlock() {
-            insertionSort(self.randomArray!)
+            insertionSort(&unwrappedRandomArray)
         }
     }
     
     func testSelectionSortPerformance() {
+        var unwrappedRandomArray: [Int] = self.randomArray!
+        
         self.measureBlock() {
-            selectionSort(self.randomArray!)
+            selectionSort(&unwrappedRandomArray)
         }
     }
 }

@@ -10,7 +10,7 @@
 
 import Foundation
 
-typealias SortAlgorithmClosure = (arr: Int[]) -> ()
+typealias SortAlgorithmClosure = (inout arr: [Int]) -> ()
 
 enum SortAlgorithmName : String {
     case Swift = "Swift"
@@ -20,12 +20,12 @@ enum SortAlgorithmName : String {
     case Selection = "Selection"
 }
 
-func randomIntegerArray(count: Int) -> Int[]
+func randomIntegerArray(count: Int) -> [Int]
 {
     println("Generating array of \(count) random integers in range: [0, \(UINT32_MAX))...")
     
-    var arr: Int[] = Array()
-    for _ in 0..count {
+    var arr: [Int] = Array()
+    for _ in 0..<count {
         var number = Int(arc4random_uniform(UINT32_MAX))
         arr.append(number)
     }
@@ -34,9 +34,9 @@ func randomIntegerArray(count: Int) -> Int[]
     return arr
 }
 
-func arrayIsSorted(arr: Int[]) -> Bool
+func arrayIsSorted(arr: [Int]) -> Bool
 {
-    for i in 0..arr.count-1 {
+    for i in 0..<arr.count-1 {
         var a = arr[i]
         var b = arr[i + 1]
         if a > b {
@@ -46,21 +46,19 @@ func arrayIsSorted(arr: Int[]) -> Bool
     return true;
 }
 
-func sortArray(#anArray: Int[],
+func sortArray(var #anArray: [Int],
                #sortName: SortAlgorithmName,
                #sortClosure: SortAlgorithmClosure) -> Double
 {
-    var arrCopy: Int[] = anArray.copy()
-    
     println("Running \(sortName.toRaw())...")
     
     var startTime = NSDate()
     
-    sortClosure(arr: arrCopy)
+    sortClosure(arr: &anArray)
     
     var totalTime = startTime.timeIntervalSinceNow * -1
     
-    assert(arrayIsSorted(arrCopy), "** Failed to sort! **")
+    assert(arrayIsSorted(anArray), "** Failed to sort! **")
     
     println("\(sortName.toRaw()) finished in \(totalTime) sec\n")
     

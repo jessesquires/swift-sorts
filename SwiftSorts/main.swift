@@ -28,7 +28,7 @@ var averageSortTimes : Dictionary<SortAlgorithmName, Double> = [SortAlgorithmNam
 
 for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
-    var unsortedArray : Int[] = randomIntegerArray(MAX_COUNT)
+    var unsortedArray : [Int] = randomIntegerArray(MAX_COUNT)
     
     for (name, closure) in sortAlgorithms {
         let totalTime = averageSortTimes[name]!

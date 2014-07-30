@@ -10,19 +10,19 @@
 
 import Foundation
 
-func swiftSort(arr: Int[])
+func swiftSort(inout arr: [Int])
 {
-    arr.sort({ $0 < $1 })
+    sort(&arr)
 }
 
-func selectionSort(arr: Int[])
+func selectionSort(inout arr: [Int])
 {
     var minIndex = 0
     
-    for i in 0..arr.count {
+    for i in 0..<arr.count {
         minIndex = i
         
-        for j in (i + 1)..arr.count {
+        for j in (i + 1)..<arr.count {
             if arr[j] < arr[minIndex] {
                 minIndex = j
             }
@@ -34,9 +34,9 @@ func selectionSort(arr: Int[])
     }
 }
 
-func insertionSort(arr: Int[])
+func insertionSort(inout arr: [Int])
 {
-    for i in 1..arr.count {
+    for i in 1..<arr.count {
         var j = i
         var target = arr[i]
         
@@ -48,25 +48,25 @@ func insertionSort(arr: Int[])
     }
 }
 
-func quickSort(arr: Int[])
+func quickSort(inout arr: [Int])
 {
-    quickSort(arr, 0, arr.count - 1)
+    quickSort(&arr, 0, arr.count - 1)
 }
 
-func quickSort(arr: Int[], left: Int, right: Int)
+func quickSort(inout arr: [Int], left: Int, right: Int)
 {
-    var index = partition(arr, left, right)
+    var index = partition(&arr, left, right)
     
     if left < index - 1 {
-        quickSort(arr, left, index - 1)
+        quickSort(&arr, left, index - 1)
     }
     
     if index < right {
-        quickSort(arr, index, right)
+        quickSort(&arr, index, right)
     }
 }
 
-func partition(arr: Int[], left: Int, right: Int) -> Int
+func partition(inout arr: [Int], left: Int, right: Int) -> Int
 {
     var i = left
     var j = right
@@ -93,30 +93,30 @@ func partition(arr: Int[], left: Int, right: Int) -> Int
     return i
 }
 
-func heapSort(arr: Int[])
+func heapSort(inout arr: [Int])
 {
-    heapify(arr, arr.count)
+    heapify(&arr, arr.count)
     
     var end = arr.count - 1
     
     while end > 0 {
         swap(&arr[end], &arr[0])
-        siftDown(arr, 0, end - 1)
+        siftDown(&arr, 0, end - 1)
         end--
     }
 }
 
-func heapify(arr: Int[], count: Int)
+func heapify(inout arr: [Int], count: Int)
 {
     var start = (count - 2) / 2
     
     while start >= 0 {
-        siftDown(arr, start, count - 1)
+        siftDown(&arr, start, count - 1)
         start--
     }
 }
 
-func siftDown(arr: Int[], start: Int, end: Int)
+func siftDown(inout arr: [Int], start: Int, end: Int)
 {
     var root = start
     
