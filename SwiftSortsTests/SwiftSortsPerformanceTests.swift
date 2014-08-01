@@ -26,42 +26,32 @@ class SwiftSortsPerformanceTests: XCTestCase {
     }
     
     func testSwiftSortPerformance() {
-        var unwrappedRandomArray: [Int] = self.randomArray!
-        
         self.measureBlock() {
-            swiftSort(&unwrappedRandomArray)
+            let sortedArray = swiftSort(self.randomArray!)
         }
     }
     
     func testQuickSortPerformance() {
-        var unwrappedRandomArray: [Int] = self.randomArray!
-        
         self.measureBlock() {
-            quickSort(&unwrappedRandomArray)
+            let sortedArray = quickSort(self.randomArray!)
         }
     }
     
     func testHeapSortPerformance() {
-        var unwrappedRandomArray: [Int] = self.randomArray!
-        
         self.measureBlock() {
-            heapSort(&unwrappedRandomArray)
+            let sortedArray = heapSort(self.randomArray!)
         }
     }
     
     func testInsertionSortPerformance() {
-        var unwrappedRandomArray: [Int] = self.randomArray!
-        
         self.measureBlock() {
-            insertionSort(&unwrappedRandomArray)
+            let sortedArray = insertionSort(self.randomArray!)
         }
     }
     
     func testSelectionSortPerformance() {
-        var unwrappedRandomArray: [Int] = self.randomArray!
-        
         self.measureBlock() {
-            selectionSort(&unwrappedRandomArray)
+            let sortedArray = selectionSort(self.randomArray!)
         }
     }
 }

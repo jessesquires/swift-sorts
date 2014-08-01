@@ -10,12 +10,12 @@
 
 import Foundation
 
-func swiftSort(inout arr: [Int])
+func swiftSort(var arr: [Int]) -> [Int]
 {
-    sort(&arr)
+    return sorted(arr);
 }
 
-func selectionSort(inout arr: [Int])
+func selectionSort(var arr: [Int]) -> [Int]
 {
     var minIndex = 0
     
@@ -32,9 +32,10 @@ func selectionSort(inout arr: [Int])
             swap(&arr[i], &arr[minIndex])
         }
     }
+    return arr;
 }
 
-func insertionSort(inout arr: [Int])
+func insertionSort(var arr: [Int]) -> [Int]
 {
     for i in 1..<arr.count {
         var j = i
@@ -46,11 +47,14 @@ func insertionSort(inout arr: [Int])
         }
         arr[j] = target
     }
+    
+    return arr;
 }
 
-func quickSort(inout arr: [Int])
+func quickSort(var arr: [Int]) -> [Int]
 {
     quickSort(&arr, 0, arr.count - 1)
+    return arr;
 }
 
 func quickSort(inout arr: [Int], left: Int, right: Int)
@@ -93,7 +97,7 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
     return i
 }
 
-func heapSort(inout arr: [Int])
+func heapSort(var arr: [Int]) -> [Int]
 {
     heapify(&arr, arr.count)
     
@@ -104,6 +108,8 @@ func heapSort(inout arr: [Int])
         siftDown(&arr, 0, end - 1)
         end--
     }
+    
+    return arr;
 }
 
 func heapify(inout arr: [Int], count: Int)

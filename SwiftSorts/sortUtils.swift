@@ -10,7 +10,7 @@
 
 import Foundation
 
-typealias SortAlgorithmClosure = (inout arr: [Int]) -> ()
+typealias SortAlgorithmClosure = (arr: [Int]) -> [Int]
 
 enum SortAlgorithmName : String {
     case Swift = "Swift"
@@ -54,11 +54,11 @@ func sortArray(var #anArray: [Int],
     
     var startTime = NSDate()
     
-    sortClosure(arr: &anArray)
+    let sortedArray = sortClosure(arr: anArray)
     
     var totalTime = startTime.timeIntervalSinceNow * -1
     
-    assert(arrayIsSorted(anArray), "** Failed to sort! **")
+    assert(arrayIsSorted(sortedArray), "** Failed to sort! **")
     
     println("\(sortName.toRaw()) finished in \(totalTime) sec\n")
     
