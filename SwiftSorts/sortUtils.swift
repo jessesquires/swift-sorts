@@ -46,7 +46,7 @@ func arrayIsSorted(arr: [Int]) -> Bool
     return true;
 }
 
-func sortArray(var #anArray: [Int],
+func sortArray(#anArray: [Int],
                #sortName: SortAlgorithmName,
                #sortClosure: SortAlgorithmClosure) -> Double
 {
