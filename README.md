@@ -1,4 +1,4 @@
-# Swift Sorts
+## Swift Sorts
 
 A collection of [sorting algorithms](http://xkcd.com/1185/) implemented in Swift.
 
