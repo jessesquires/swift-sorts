@@ -10,9 +10,9 @@
 
 import Foundation
 
-let MAX_COUNT = 10_000
+let MAX_COUNT = 100_000
 
-let NUM_TRIALS = 10
+let NUM_TRIALS = 20
 
 let sortAlgorithms : [SortAlgorithmName : SortAlgorithmClosure] = [SortAlgorithmName.Swift : swiftSort,
                                                                    SortAlgorithmName.Quick : quickSort,

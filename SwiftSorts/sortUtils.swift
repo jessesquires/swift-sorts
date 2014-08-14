@@ -50,7 +50,7 @@ func sortArray(#anArray: [Int],
                #sortName: SortAlgorithmName,
                #sortClosure: SortAlgorithmClosure) -> Double
 {
-    println("Running \(sortName.toRaw())...")
+    println("Running \(sortName.toRaw()) sort...")
     
     var startTime = NSDate()
     
@@ -60,7 +60,7 @@ func sortArray(#anArray: [Int],
     
     assert(arrayIsSorted(sortedArray), "** Failed to sort! **")
     
-    println("\(sortName.toRaw()) finished in \(totalTime) sec\n")
+    println("\(sortName.toRaw()) sort finished in \(totalTime) sec\n")
     
     return totalTime
 }
