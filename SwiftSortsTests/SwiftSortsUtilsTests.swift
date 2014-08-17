@@ -33,6 +33,14 @@ class SwiftSortsUtilsTests: XCTestCase {
         
         swift.sortTimes = [5.0, 10.0, 20.0, 30.0, 5.0]
         
-        XCTAssertEqual(swift.averageSortTime, 14)
+        XCTAssertEqual(swift.averageSortTime(), 14)
+    }
+    
+    func testSortAlgorithmBenchmarkStandardDeviation() {
+        var swift = SortAlgorithmBenchmark(.Swift)
+        
+        swift.sortTimes = [5.0, 10.0, 20.0, 30.0, 5.0]
+        
+        XCTAssertEqualWithAccuracy(swift.standardDeviation(), 9.6953, 0.0001)
     }
 }

@@ -55,11 +55,7 @@ class SortAlgorithmBenchmark {
     }
     
     var description: String {
-        return "\(name): average time = \(averageSortTime) sec"
-    }
-    
-    var averageSortTime: Double {
-        return reduce(sortTimes, 0.0, { $0 + $1 }) / Double(sortTimes.count)
+        return "\(name): avg = \(averageSortTime()) sec, std dev = \(standardDeviation())"
     }
     
     func sortArray(anArray: [Int]) -> Double {
@@ -78,5 +74,21 @@ class SortAlgorithmBenchmark {
         sortTimes.append(totalTime)
         
         return totalTime
+    }
+    
+    func averageSortTime() -> Double {
+        return reduce(sortTimes, 0.0, { $0 + $1 }) / Double(sortTimes.count)
+    }
+    
+    func standardDeviation() -> Double {
+        var avg = averageSortTime()
+        
+        var variance = sortTimes.map({ pow($0 - avg, 2.0) })
+        
+        var sum = reduce(variance, 0.0, { $0 + $1 })
+        
+        var mean = sum / Double(variance.count)
+        
+        return sqrt(mean)
     }
 }
