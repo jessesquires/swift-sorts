@@ -10,6 +10,8 @@
 		8810836A194FEE900078727B /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		8810836B194FEE900078727B /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		8876DD9019A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876DD8F19A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift */; };
+		8876DD9219A07B1900F56BC3 /* SortAlgorithmBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876DD9119A07B1900F56BC3 /* SortAlgorithmBenchmark.swift */; };
+		8876DD9319A07B5F00F56BC3 /* SortAlgorithmBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876DD9119A07B1900F56BC3 /* SortAlgorithmBenchmark.swift */; };
 		889486171940406B00FAA122 /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		889486191940407500FAA122 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88948622194040A700FAA122 /* SwiftSortsTests.swift */; };
@@ -31,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		8876DD8F19A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSortsUtilsTests.swift; sourceTree = "<group>"; };
+		8876DD9119A07B1900F56BC3 /* SortAlgorithmBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortAlgorithmBenchmark.swift; sourceTree = "<group>"; };
 		889486161940406B00FAA122 /* sortUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sortUtils.swift; sourceTree = "<group>"; };
 		889486181940407500FAA122 /* sorts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sorts.swift; sourceTree = "<group>"; };
 		8894861E194040A700FAA122 /* SwiftSortsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSortsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,7 @@
 				88B3D56E193EE32D000006CD /* main.swift */,
 				889486181940407500FAA122 /* sorts.swift */,
 				889486161940406B00FAA122 /* sortUtils.swift */,
+				8876DD9119A07B1900F56BC3 /* SortAlgorithmBenchmark.swift */,
 			);
 			path = SwiftSorts;
 			sourceTree = "<group>";
@@ -193,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8876DD9319A07B5F00F56BC3 /* SortAlgorithmBenchmark.swift in Sources */,
 				8876DD9019A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift in Sources */,
 				88A0A4E519508B3E00672F9A /* SwiftSortsPerformanceTests.swift in Sources */,
 				8810836A194FEE900078727B /* sorts.swift in Sources */,
@@ -206,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				889486191940407500FAA122 /* sorts.swift in Sources */,
+				8876DD9219A07B1900F56BC3 /* SortAlgorithmBenchmark.swift in Sources */,
 				88B3D56F193EE32D000006CD /* main.swift in Sources */,
 				889486171940406B00FAA122 /* sortUtils.swift in Sources */,
 			);

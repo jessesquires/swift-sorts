@@ -8,43 +8,29 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-import Foundation
-
 let MAX_COUNT = 100_000
 
 let NUM_TRIALS = 20
 
-let sortAlgorithms : [SortAlgorithmName : SortAlgorithmClosure] = [SortAlgorithmName.Swift : swiftSort,
-                                                                   SortAlgorithmName.Quick : quickSort,
-                                                                   SortAlgorithmName.Heap : heapSort,
-                                                                   SortAlgorithmName.Insertion : insertionSort,
-                                                                   SortAlgorithmName.Selection : selectionSort]
-
-var averageSortTimes : [SortAlgorithmName : Double] = [SortAlgorithmName.Swift : 0.0,
-                                                       SortAlgorithmName.Quick : 0.0,
-                                                       SortAlgorithmName.Heap : 0.0,
-                                                       SortAlgorithmName.Insertion : 0.0,
-                                                       SortAlgorithmName.Selection : 0.0]
+let benchmarks: [SortAlgorithmBenchmark] = [SortAlgorithmBenchmark(.Swift),
+                                            SortAlgorithmBenchmark(.Quick),
+                                            SortAlgorithmBenchmark(.Heap),
+                                            SortAlgorithmBenchmark(.Insertion),
+                                            SortAlgorithmBenchmark(.Selection)]
 
 for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
     var unsortedArray : [Int] = randomIntegerArray(MAX_COUNT)
     
-    for (name, closure) in sortAlgorithms {
-        let totalTime = averageSortTimes[name]!
-        
-        var sortTime = sortArray(anArray: unsortedArray,
-                                 sortName: name,
-                                 sortClosure: closure)
-        
-        averageSortTimes[name] = totalTime + sortTime
+    for sortBenchmark in benchmarks {
+        sortBenchmark.sortArray(unsortedArray)
     }
 }
 
 println("\nFinal Results:\n--------------")
 
-for (name, time) in averageSortTimes {
-    println("\(name.toRaw()) sort average time = \(time / Double(NUM_TRIALS)) sec")
+for sort in benchmarks {
+    println("\(sort.description)")
 }
 
 println()

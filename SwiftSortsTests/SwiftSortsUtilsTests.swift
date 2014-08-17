@@ -27,4 +27,12 @@ class SwiftSortsUtilsTests: XCTestCase {
         var unsortedArray = [6, 2, 3, 9, 1, 5, 7, 10, 4, 8];
         XCTAssertFalse(arrayIsSorted(unsortedArray), "Array should not be sorted");
     }
+    
+    func testSortAlgorithmBenchmarkAverage() {
+        var swift = SortAlgorithmBenchmark(.Swift)
+        
+        swift.sortTimes = [5.0, 10.0, 20.0, 30.0, 5.0]
+        
+        XCTAssertEqual(swift.averageSortTime, 14)
+    }
 }

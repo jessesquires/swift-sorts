@@ -8,8 +8,6 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-import Foundation
-
 func swiftSort(var arr: [Int]) -> [Int]
 {
     return sorted(arr);
