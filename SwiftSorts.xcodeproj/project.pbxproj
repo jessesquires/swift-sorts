@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8810836A194FEE900078727B /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		8810836B194FEE900078727B /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
+		8876DD9019A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8876DD8F19A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift */; };
 		889486171940406B00FAA122 /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486161940406B00FAA122 /* sortUtils.swift */; };
 		889486191940407500FAA122 /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889486181940407500FAA122 /* sorts.swift */; };
 		88948623194040A700FAA122 /* SwiftSortsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88948622194040A700FAA122 /* SwiftSortsTests.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8876DD8F19A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSortsUtilsTests.swift; sourceTree = "<group>"; };
 		889486161940406B00FAA122 /* sortUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sortUtils.swift; sourceTree = "<group>"; };
 		889486181940407500FAA122 /* sorts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sorts.swift; sourceTree = "<group>"; };
 		8894861E194040A700FAA122 /* SwiftSortsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSortsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			children = (
 				88948622194040A700FAA122 /* SwiftSortsTests.swift */,
 				88A0A4E419508B3E00672F9A /* SwiftSortsPerformanceTests.swift */,
+				8876DD8F19A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift */,
 				88948620194040A700FAA122 /* Supporting Files */,
 			);
 			path = SwiftSortsTests;
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8876DD9019A05D9A00F56BC3 /* SwiftSortsUtilsTests.swift in Sources */,
 				88A0A4E519508B3E00672F9A /* SwiftSortsPerformanceTests.swift in Sources */,
 				8810836A194FEE900078727B /* sorts.swift in Sources */,
 				8810836B194FEE900078727B /* sortUtils.swift in Sources */,
