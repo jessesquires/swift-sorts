@@ -51,7 +51,7 @@ class SortAlgorithmBenchmark {
     }
     
     var name: String {
-        return algorithm.toRaw() + " sort"
+        return algorithm.rawValue + " sort"
     }
     
     var description: String {
