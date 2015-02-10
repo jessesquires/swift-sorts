@@ -55,7 +55,9 @@ class SortAlgorithmBenchmark {
     }
     
     var description: String {
-        return "\(name): avg = \(averageSortTime()) sec, std dev = \(standardDeviation())"
+        let avgTime = String(format: "%.6lf", averageSortTime())
+        let stdDev = String(format: "%.6lf", standardDeviation())
+        return "\(name): " + avgTime + " s (± " + stdDev + ")"
     }
     
     func sortArray(anArray: [Int]) -> Double {

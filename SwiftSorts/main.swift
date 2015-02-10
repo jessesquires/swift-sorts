@@ -20,7 +20,8 @@ let benchmarks: [SortAlgorithmBenchmark] = [SortAlgorithmBenchmark(.Swift),
 
 for t in 1...NUM_TRIALS {
     println("::: TRIAL \(t) :::")
-    var unsortedArray : [Int] = randomIntegerArray(MAX_COUNT)
+
+    var unsortedArray: [Int] = randomIntegerArray(MAX_COUNT)
     
     for sortBenchmark in benchmarks {
         sortBenchmark.sortArray(unsortedArray)
