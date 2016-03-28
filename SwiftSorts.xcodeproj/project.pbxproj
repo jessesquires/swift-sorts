@@ -153,6 +153,7 @@
 		88B3D563193EE32D000006CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {

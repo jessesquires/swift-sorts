@@ -21,15 +21,15 @@ class SwiftSortsUtilsTests: XCTestCase {
     }
 
     func testArrayIsSortUtil() {
-        var sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         XCTAssertTrue(arrayIsSorted(sortedArray), "Array should be sorted");
         
-        var unsortedArray = [6, 2, 3, 9, 1, 5, 7, 10, 4, 8];
+        let unsortedArray = [6, 2, 3, 9, 1, 5, 7, 10, 4, 8];
         XCTAssertFalse(arrayIsSorted(unsortedArray), "Array should not be sorted");
     }
     
     func testSortAlgorithmBenchmarkAverage() {
-        var swift = SortAlgorithmBenchmark(.Swift)
+        let swift = SortAlgorithmBenchmark(.Swift)
         
         swift.sortTimes = [5.0, 10.0, 20.0, 30.0, 5.0]
         
@@ -37,10 +37,10 @@ class SwiftSortsUtilsTests: XCTestCase {
     }
     
     func testSortAlgorithmBenchmarkStandardDeviation() {
-        var swift = SortAlgorithmBenchmark(.Swift)
+        let swift = SortAlgorithmBenchmark(.Swift)
         
         swift.sortTimes = [5.0, 10.0, 20.0, 30.0, 5.0]
         
-        XCTAssertEqualWithAccuracy(swift.standardDeviation(), 9.6953, 0.0001)
+        XCTAssertEqualWithAccuracy(swift.standardDeviation(), 9.6953, accuracy: 0.0001)
     }
 }
