@@ -41,7 +41,7 @@ func insertionSort(var arr: [Int]) -> [Int]
         
         while j > 0 && target < arr[j - 1] {
             swap(&arr[j], &arr[j - 1])
-            j--
+            j -= 1
         }
         arr[j] = target
     }
@@ -76,19 +76,19 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
     
     while i <= j {
         while arr[i] < pivot {
-            i++
+            i += 1
         }
         
         while j > 0 && arr[j] > pivot {
-            j--
+            j -= 1
         }
         
         if i <= j {
             swap(&arr[i], &arr[j])
-            i++
+            i += 1
             
             if j > 0 {
-                j--
+                j -= 1
             }
         }
     }
@@ -104,7 +104,7 @@ func heapSort(var arr: [Int]) -> [Int]
     while end > 0 {
         swap(&arr[end], &arr[0])
         siftDown(&arr, 0, end - 1)
-        end--
+        end -= 1
     }
     
     return arr;
@@ -116,7 +116,7 @@ func heapify(inout arr: [Int], count: Int)
     
     while start >= 0 {
         siftDown(&arr, start, count - 1)
-        start--
+        start -= 1
     }
 }
 
@@ -128,7 +128,7 @@ func siftDown(inout arr: [Int], start: Int, end: Int)
         var child = root * 2 + 1
         
         if child + 1 <= end && arr[child] < arr[child + 1] {
-            child++
+            child += 1
         }
         
         if arr[root] < arr[child] {
