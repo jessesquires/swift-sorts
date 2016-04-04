@@ -13,8 +13,9 @@ func swiftSort(arr: [Int]) -> [Int]
     return arr.sort();
 }
 
-func selectionSort(var arr: [Int]) -> [Int]
+func selectionSort(array: [Int]) -> [Int]
 {
+	var arr = array
     var minIndex = 0
     
     for i in 0..<arr.count {
@@ -33,8 +34,9 @@ func selectionSort(var arr: [Int]) -> [Int]
     return arr;
 }
 
-func insertionSort(var arr: [Int]) -> [Int]
+func insertionSort(array: [Int]) -> [Int]
 {
+	var arr = array
     for i in 1..<arr.count {
         var j = i
         let target = arr[i]
@@ -49,8 +51,9 @@ func insertionSort(var arr: [Int]) -> [Int]
     return arr;
 }
 
-func quickSort(var arr: [Int]) -> [Int]
+func quickSort(array: [Int]) -> [Int]
 {
+	var arr = array
     quickSort(&arr, left: 0, right: arr.count - 1)
     return arr;
 }
@@ -95,8 +98,9 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
     return i
 }
 
-func heapSort(var arr: [Int]) -> [Int]
+func heapSort(array: [Int]) -> [Int]
 {
+	var arr = array
     heapify(&arr, count: arr.count)
     
     var end = arr.count - 1
