@@ -61,17 +61,17 @@ class SortAlgorithmBenchmark {
     }
     
     func sortArray(anArray: [Int]) -> Double {
-        println("Running \(name)...")
+        print("Running \(name)...")
         
-        var startTime = NSDate()
+        let startTime = NSDate()
         
         let sortedArray = algorithm.closure(arr: anArray)
         
-        var totalTime = startTime.timeIntervalSinceNow * -1
+        let totalTime = startTime.timeIntervalSinceNow * -1
         
         assert(arrayIsSorted(sortedArray), "** Failed to sort! **")
         
-        println("\(name) finished in \(totalTime) sec\n")
+        print("\(name) finished in \(totalTime) sec\n")
         
         sortTimes.append(totalTime)
         
@@ -79,17 +79,17 @@ class SortAlgorithmBenchmark {
     }
     
     func averageSortTime() -> Double {
-        return reduce(sortTimes, 0.0, { $0 + $1 }) / Double(sortTimes.count)
+        return sortTimes.reduce(0.0, combine: { $0 + $1 }) / Double(sortTimes.count)
     }
     
     func standardDeviation() -> Double {
-        var avg = averageSortTime()
+        let avg = averageSortTime()
         
-        var variance = sortTimes.map({ pow($0 - avg, 2.0) })
+        let variance = sortTimes.map({ pow($0 - avg, 2.0) })
         
-        var sum = reduce(variance, 0.0, { $0 + $1 })
+        let sum = variance.reduce(0.0, combine: { $0 + $1 })
         
-        var mean = sum / Double(variance.count)
+        let mean = sum / Double(variance.count)
         
         return sqrt(mean)
     }

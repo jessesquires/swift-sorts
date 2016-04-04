@@ -8,13 +8,14 @@
 //  Copyright (c) 2014 Jesse Squires
 //
 
-func swiftSort(var arr: [Int]) -> [Int]
+func swiftSort(arr: [Int]) -> [Int]
 {
-    return sorted(arr);
+    return arr.sort();
 }
 
-func selectionSort(var arr: [Int]) -> [Int]
+func selectionSort(array: [Int]) -> [Int]
 {
+	var arr = array
     var minIndex = 0
     
     for i in 0..<arr.count {
@@ -33,11 +34,12 @@ func selectionSort(var arr: [Int]) -> [Int]
     return arr;
 }
 
-func insertionSort(var arr: [Int]) -> [Int]
+func insertionSort(array: [Int]) -> [Int]
 {
+	var arr = array
     for i in 1..<arr.count {
         var j = i
-        var target = arr[i]
+        let target = arr[i]
         
         while j > 0 && target < arr[j - 1] {
             swap(&arr[j], &arr[j - 1])
@@ -49,22 +51,23 @@ func insertionSort(var arr: [Int]) -> [Int]
     return arr;
 }
 
-func quickSort(var arr: [Int]) -> [Int]
+func quickSort(array: [Int]) -> [Int]
 {
-    quickSort(&arr, 0, arr.count - 1)
+	var arr = array
+    quickSort(&arr, left: 0, right: arr.count - 1)
     return arr;
 }
 
 func quickSort(inout arr: [Int], left: Int, right: Int)
 {
-    var index = partition(&arr, left, right)
+    let index = partition(&arr, left: left, right: right)
     
     if left < index - 1 {
-        quickSort(&arr, left, index - 1)
+        quickSort(&arr, left: left, right: index - 1)
     }
     
     if index < right {
-        quickSort(&arr, index, right)
+        quickSort(&arr, left: index, right: right)
     }
 }
 
@@ -72,7 +75,7 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
 {
     var i = left
     var j = right
-    var pivot = arr[(left + right) / 2]
+    let pivot = arr[(left + right) / 2]
     
     while i <= j {
         while arr[i] < pivot {
@@ -95,15 +98,16 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
     return i
 }
 
-func heapSort(var arr: [Int]) -> [Int]
+func heapSort(array: [Int]) -> [Int]
 {
-    heapify(&arr, arr.count)
+	var arr = array
+    heapify(&arr, count: arr.count)
     
     var end = arr.count - 1
     
     while end > 0 {
         swap(&arr[end], &arr[0])
-        siftDown(&arr, 0, end - 1)
+        siftDown(&arr, start: 0, end: end - 1)
         end -= 1
     }
     
@@ -115,7 +119,7 @@ func heapify(inout arr: [Int], count: Int)
     var start = (count - 2) / 2
     
     while start >= 0 {
-        siftDown(&arr, start, count - 1)
+        siftDown(&arr, start: start, end: count - 1)
         start -= 1
     }
 }

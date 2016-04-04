@@ -26,42 +26,42 @@ class SwiftSortsTests: XCTestCase {
     }
     
     func testSwiftSort() {
-        XCTAssertFalse(equal(self.sortedArray, self.unsortedArray!), "Arrays should not be equal before sorting")
+        XCTAssertNotEqual(self.sortedArray, self.unsortedArray!, "Arrays should not be equal before sorting")
 
         let newSortedArray = swiftSort(self.unsortedArray!)
-        
-        XCTAssertTrue(equal(self.sortedArray, newSortedArray), "Arrays should be equal after sorting")
+
+        XCTAssertEqual(self.sortedArray, newSortedArray, "Arrays should be equal after sorting")
     }
     
     func testQuickSort() {
-        XCTAssertFalse(equal(self.sortedArray, self.unsortedArray!), "Arrays should not be equal before sorting")
+        XCTAssertNotEqual(self.sortedArray, self.unsortedArray!, "Arrays should not be equal before sorting")
         
         let newSortedArray = quickSort(self.unsortedArray!)
         
-        XCTAssertTrue(equal(self.sortedArray, newSortedArray), "Arrays should be equal after sorting")
+        XCTAssertEqual(self.sortedArray, newSortedArray, "Arrays should be equal after sorting")
     }
 
     func testHeapSort() {
-        XCTAssertFalse(equal(self.sortedArray, self.unsortedArray!), "Arrays should not be equal before sorting")
+        XCTAssertNotEqual(self.sortedArray, self.unsortedArray!, "Arrays should not be equal before sorting")
         
         let newSortedArray = heapSort(self.unsortedArray!)
         
-        XCTAssertTrue(equal(self.sortedArray, newSortedArray), "Arrays should be equal after sorting")
+        XCTAssertEqual(self.sortedArray, newSortedArray, "Arrays should be equal after sorting")
     }
     
     func testInsertionSort() {
-        XCTAssertFalse(equal(self.sortedArray, self.unsortedArray!), "Arrays should not be equal before sorting")
+        XCTAssertNotEqual(self.sortedArray, self.unsortedArray!, "Arrays should not be equal before sorting")
         
         let newSortedArray = insertionSort(self.unsortedArray!)
         
-        XCTAssertTrue(equal(self.sortedArray, newSortedArray), "Arrays should be equal after sorting")
+        XCTAssertEqual(self.sortedArray, newSortedArray, "Arrays should be equal after sorting")
     }
     
     func testSelectionSort() {
-        XCTAssertFalse(equal(self.sortedArray, self.unsortedArray!), "Arrays should not be equal before sorting")
+        XCTAssertNotEqual(self.sortedArray, self.unsortedArray!, "Arrays should not be equal before sorting")
         
         let newSortedArray = selectionSort(self.unsortedArray!)
         
-        XCTAssertTrue(equal(self.sortedArray, newSortedArray), "Arrays should be equal after sorting")
+        XCTAssertEqual(self.sortedArray, newSortedArray, "Arrays should be equal after sorting")
     }
 }
