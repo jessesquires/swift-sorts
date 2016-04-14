@@ -2,5 +2,8 @@ language: objective-c
 osx_image: xcode7.3
 
 script: 
-- xcodebuild clean build -project SwiftSorts.xcodeproj -scheme SwiftSortsRelease
-- xcodebuild test -project SwiftSorts.xcodeproj -scheme SwiftSortsTests
+- xcodebuild clean build -project SwiftSorts.xcodeproj -scheme SwiftSortsRelease -sdk iphonesimulator
+- xcodebuild test -project SwiftSorts.xcodeproj -scheme SwiftSortsTests -sdk iphonesimulator
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
