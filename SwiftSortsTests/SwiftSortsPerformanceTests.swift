@@ -27,31 +27,31 @@ class SwiftSortsPerformanceTests: XCTestCase {
     
     func testSwiftSortPerformance() {
         self.measureBlock() {
-            let sortedArray = swiftSort(self.randomArray!)
+            _ = swiftSort(self.randomArray!)
         }
     }
     
     func testQuickSortPerformance() {
         self.measureBlock() {
-            let sortedArray = quickSort(self.randomArray!)
+            _ = quickSort(self.randomArray!)
         }
     }
     
     func testHeapSortPerformance() {
         self.measureBlock() {
-            let sortedArray = heapSort(self.randomArray!)
+            _ = heapSort(self.randomArray!)
         }
     }
     
     func testInsertionSortPerformance() {
         self.measureBlock() {
-            let sortedArray = insertionSort(self.randomArray!)
+            _ = insertionSort(self.randomArray!)
         }
     }
     
     func testSelectionSortPerformance() {
         self.measureBlock() {
-            let sortedArray = selectionSort(self.randomArray!)
+            _ = selectionSort(self.randomArray!)
         }
     }
 }
