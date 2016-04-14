@@ -87,7 +87,9 @@ func partition(inout arr: [Int], left: Int, right: Int) -> Int
         }
         
         if i <= j {
-            swap(&arr[i], &arr[j])
+            if i != j {
+                swap(&arr[i], &arr[j])
+            }
             i += 1
             
             if j > 0 {
